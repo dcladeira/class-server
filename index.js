@@ -13,9 +13,12 @@ import express from 'express';
 import * as dotenv from 'dotenv';
 import propertyRouter from './routes/property.routes.js'    // colocar o .js
 import userRouter from './routes/user.routes.js'
+import dbConnection from './config/db.config.js'
 
 // configuração padrão do dotenv
 dotenv.config();
+
+dbConnection();
 
 // inicialização do express
 const app = express();
